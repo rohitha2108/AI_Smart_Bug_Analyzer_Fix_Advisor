@@ -1,3 +1,4 @@
+from search_bug import search_similar_bugs
 import os
 import streamlit as st
 
@@ -30,6 +31,14 @@ if st.button("Submit"):
     st.write("**Bug Title:**", bug_title)
     st.write("**Bug Description:**", bug_description)
     st.write("**Error Log / Stack Trace:**", error_log)
+    st.subheader("Top Similar Bugs")
+
+results = search_similar_bugs(bug_description)
+
+for i, bug in enumerate(results):
+    st.write(f"### Bug {i+1}")
+    st.write(bug)
+    st.write("---")
 
     if uploaded_file is not None:
         st.write("**Uploaded File:**", uploaded_file.name)
