@@ -1,0 +1,14 @@
+{
+    "Triage Agent": {
+        "Severity": "Low",
+        "Priority": "Low",
+        "Component": "Frontend",
+        "Confidence": 90,
+        "Reasoning": "Detected keywords related to Frontend"
+    },
+    "Log Analysis Agent": {
+        "Exception": "Unknown",
+        "Failure Point": "Unknown",
+        "Affected Code Path": "Unknown"
+    }
+}
