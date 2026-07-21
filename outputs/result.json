@@ -2,9 +2,9 @@
     "Triage Agent": {
         "Severity": "Low",
         "Priority": "Low",
-        "Component": "Frontend",
+        "Component": "General",
         "Confidence": 90,
-        "Reasoning": "Detected keywords related to Frontend"
+        "Reasoning": "Detected keywords related to General"
     },
     "Log Analysis Agent": {
         "Exception": "Unknown",
