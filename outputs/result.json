@@ -1,14 +1,14 @@
 {
     "Triage Agent": {
-        "Severity": "Low",
-        "Priority": "Low",
-        "Component": "General",
+        "Severity": "High",
+        "Priority": "Medium",
+        "Component": "Database",
         "Confidence": 90,
-        "Reasoning": "Detected keywords related to General"
+        "Reasoning": "Detected keywords related to Database"
     },
     "Log Analysis Agent": {
-        "Exception": "Unknown",
-        "Failure Point": "Unknown",
-        "Affected Code Path": "Unknown"
+        "Exception": "SQLException",
+        "Failure Point": "Database.java:78",
+        "Affected Code Path": "Database.java"
     }
 }
