@@ -81,22 +81,30 @@ if st.button("🚀 Submit Bug"):
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.metric("🔥 Severity", triage["Severity"])
+        severity = triage["Severity"]
+
+        if severity == "High":
+            st.error(f"🔥 Severity\n\n{severity}")
+        elif severity == "Medium":
+            st.warning(f"🟡 Severity\n\n{severity}")
+        else:
+            st.success(f"🟢 Severity\n\n{severity}")
 
     with col2:
         st.metric("⚡ Priority", triage["Priority"])
 
     with col3:
         st.metric("🎯 Confidence", f"{triage['Confidence']}%")
+        st.progress(triage["Confidence"] / 100)
 
     st.info(f"🧩 Component : {triage['Component']}")
 
-    with st.expander("💡 Reasoning"):
+    with st.expander("💡 AI Reasoning"):
         st.write(triage["Reasoning"])
 
-    st.divider()
-
     # ---------------- LOG ANALYSIS ----------------
+
+    st.divider()
 
     st.subheader("📄 Log Analysis")
 
@@ -105,18 +113,86 @@ if st.button("🚀 Submit Bug"):
     col1, col2 = st.columns(2)
 
     with col1:
-        st.success(f"**Exception**\n\n{log['Exception']}")
+        st.success(f"✅ Exception\n\n{log['Exception']}")
 
     with col2:
-        st.warning(f"**Failure Point**\n\n{log['Failure Point']}")
+        st.warning(f"⚠ Failure Point\n\n{log['Failure Point']}")
 
     st.info(f"📍 Affected Code Path : {log['Affected Code Path']}")
 
+    # ---------------- ROOT CAUSE ----------------
+
     st.divider()
 
-    # ---------------- Similar Bugs ----------------
+    st.subheader("🧠 Root Cause Agent")
 
-    st.subheader("🔍 Top Similar Bugs")
+    root = analysis["Root Cause Agent"]
+
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.metric("🎯 Confidence", f"{root['Confidence']}%")
+        st.progress(root["Confidence"] / 100)
+
+    with col2:
+        st.success(f"🛠 Root Cause\n\n{root['Root Cause']}")
+
+    with col3:
+        st.info("📚 Historical Evidence")
+
+    evidence = root["Evidence"]
+
+    st.write(evidence[:200] + "...")
+
+    with st.expander("📖 Show More"):
+        st.write(evidence)
+    # ---------------- DUPLICATE DETECTION ----------------
+
+    st.divider()
+
+    st.subheader("🔍 Duplicate Detection Agent")
+
+    duplicates = analysis["Duplicate Detection Agent"]
+
+    for bug in duplicates:
+
+        with st.expander(f"🐞 Duplicate Bug {bug['Bug ID']}"):
+
+            col1, col2 = st.columns(2)
+
+            with col1:
+                st.metric("Similarity", bug["Similarity"])
+
+            with col2:
+                st.success("Historical Match Found")
+
+            st.write("### 📄 Historical Resolution Summary")
+            st.write(bug["Historical Summary"])
+
+    # ---------------- REMEDIATION AGENT ----------------
+
+    st.divider()
+
+    st.subheader("🛠️ Remediation Agent")
+
+    remedy = analysis["Remediation Agent"]
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.metric("Confidence", f"{remedy['Confidence']}%")
+        st.progress(remedy["Confidence"] / 100)
+
+    with col2:
+        st.success(remedy["Recommended Fix"])
+
+    st.info(f"💡 Best Practice : {remedy['Best Practice']}")
+
+    # ---------------- TOP SIMILAR BUGS ----------------
+
+    st.divider()
+
+    st.subheader("📚 Historical Similar Bugs")
 
     results = search_similar_bugs(bug_description)
 
@@ -124,4 +200,4 @@ if st.button("🚀 Submit Bug"):
 
         with st.expander(f"🐞 Similar Bug {i+1}"):
 
-            st.write(bug)
+            st.code(bug)
