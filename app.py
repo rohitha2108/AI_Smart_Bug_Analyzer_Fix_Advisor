@@ -201,3 +201,24 @@ if st.button("🚀 Submit Bug"):
         with st.expander(f"🐞 Similar Bug {i+1}"):
 
             st.code(bug)
+            
+    # ---------------- STRUCTURED FINDINGS SUMMARY ----------------
+
+    st.divider()
+
+    st.header("📋 Structured Findings Summary")
+
+    summary = {
+        "Severity": triage["Severity"],
+        "Priority": triage["Priority"],
+        "Component": triage["Component"],
+        "Exception": log["Exception"],
+        "Failure Point": log["Failure Point"],
+        "Affected Code Path": log["Affected Code Path"],
+        "Root Cause": root["Root Cause"],
+        "Root Cause Confidence": f"{root['Confidence']}%",
+        "Recommended Fix": remedy["Recommended Fix"],
+        "Remediation Confidence": f"{remedy['Confidence']}%"
+    }
+
+    st.json(summary)
