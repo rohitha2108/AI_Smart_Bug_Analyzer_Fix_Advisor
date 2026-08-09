@@ -1,0 +1,74 @@
+[
+    {
+        "Title": "UI Error",
+        "Description": "\n\nSubmit button is not visible on homepage.\n",
+        "Exception": "Unknown",
+        "Root Cause": "Possible application logic or configuration issue.",
+        "Recommended Fix": "Review the application logic and configuration.",
+        "Best Practice": "Perform detailed debugging and code review.",
+        "Confirmed": true
+    },
+    {
+        "Title": "Login Error",
+        "Description": "\n\nUnable to login after entering password.\n\n",
+        "Exception": "NullPointerException",
+        "Root Cause": "Possible application logic or configuration issue.",
+        "Recommended Fix": "Review the application logic and configuration.",
+        "Best Practice": "Perform detailed debugging and code review.",
+        "Confirmed": true
+    },
+    {
+        "Title": "Login Error",
+        "Description": "\n\nUnable to login after entering password.\n\n",
+        "Exception": "NullPointerException",
+        "Root Cause": "Possible application logic or configuration issue.",
+        "Recommended Fix": "Review the application logic and configuration.",
+        "Best Practice": "Perform detailed debugging and code review.",
+        "Confirmed": true
+    },
+    {
+        "Title": "Login Error",
+        "Description": "\n\nUnable to login after entering password.\n\n",
+        "Exception": "NullPointerException",
+        "Root Cause": "Possible application logic or configuration issue.",
+        "Recommended Fix": "Review the application logic and configuration.",
+        "Best Practice": "Perform detailed debugging and code review.",
+        "Confirmed": true
+    },
+    {
+        "Title": "Login Error",
+        "Description": "\nUnable to login after entering password.\n",
+        "Exception": "NullPointerException",
+        "Root Cause": "Possible application logic or configuration issue.",
+        "Recommended Fix": "Review the application logic and configuration.",
+        "Best Practice": "Perform detailed debugging and code review.",
+        "Confirmed": true
+    },
+    {
+        "Title": "Database Error",
+        "Description": "\nDatabase connection failed while fetching user details.\n\n",
+        "Exception": "SQLException",
+        "Root Cause": "Database connection or query execution failure.",
+        "Recommended Fix": "Verify database connection and SQL queries.",
+        "Best Practice": "Use connection pooling and proper exception handling.",
+        "Confirmed": true
+    },
+    {
+        "Title": "Payment Error",
+        "Description": "\nPayment fails when the user tries to complete the transaction.\n\n",
+        "Exception": "PaymentGatewayException",
+        "Root Cause": "Possible application logic or configuration issue.",
+        "Recommended Fix": "Review the application logic and configuration.",
+        "Best Practice": "Perform detailed debugging and code review.",
+        "Confirmed": true
+    },
+    {
+        "Title": "File Upload Error",
+        "Description": "\nFile upload fails when the user uploads a large document.\n",
+        "Exception": "FileSizeLimitExceededException",
+        "Root Cause": "File path missing or file not found.",
+        "Recommended Fix": "Verify the file path and ensure the file exists.",
+        "Best Practice": "Validate file existence before reading.",
+        "Confirmed": true
+    }
+]
