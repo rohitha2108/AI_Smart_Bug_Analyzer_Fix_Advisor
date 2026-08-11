@@ -188,5 +188,45 @@
         "Exception": "NullPointerException",
         "Failure Point": "Login.java:45",
         "Root Cause": "Possible application logic or configuration issue."
+    },
+    {
+        "Title": "Login Error",
+        "Description": "Unable to login after entering password.\n",
+        "Severity": "High",
+        "Priority": "High",
+        "Component": "Authentication",
+        "Exception": "NullPointerException",
+        "Failure Point": "Login.java:45",
+        "Root Cause": "Possible application logic or configuration issue."
+    },
+    {
+        "Title": "Login Error",
+        "Description": "Unable to login after entering password.\n\n",
+        "Severity": "High",
+        "Priority": "High",
+        "Component": "Authentication",
+        "Exception": "NullPointerException",
+        "Failure Point": "Login.java:45",
+        "Root Cause": "Possible application logic or configuration issue."
+    },
+    {
+        "Title": "Login Error",
+        "Description": "Unable to login after entering password.\n\n",
+        "Severity": "High",
+        "Priority": "High",
+        "Component": "Authentication",
+        "Exception": "NullPointerException",
+        "Failure Point": "Login.java:45",
+        "Root Cause": "Possible application logic or configuration issue."
+    },
+    {
+        "Title": "Login Error",
+        "Description": "\nUnable to login after entering password.\n\n",
+        "Severity": "High",
+        "Priority": "High",
+        "Component": "Authentication",
+        "Exception": "NullPointerException",
+        "Failure Point": "Login.java:45",
+        "Root Cause": "Possible application logic or configuration issue."
     }
 ]

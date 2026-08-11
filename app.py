@@ -14,7 +14,7 @@ import streamlit as st
 # =========================================================
 
 st.set_page_config(
-    page_title="AI Smart Bug Analyzer",
+    page_title="Intelligent Bug Diagnosis Platform",
     page_icon="🤖",
     layout="wide"
 )
@@ -47,11 +47,11 @@ if "knowledge_base_added" not in st.session_state:
 # SIDEBAR
 # =========================================================
 
-st.sidebar.title("🤖 AI Smart Bug Analyzer")
+st.sidebar.title("🤖 Intelligent Bug Diagnosis Platform")
 
 st.sidebar.write("### Project Information")
 
-st.sidebar.success("Milestone 4 In Progress 🚀")
+st.sidebar.success("Milestone 4 Completed ✅")
 
 st.sidebar.info("Model : all-MiniLM-L6-v2")
 st.sidebar.info("Database : FAISS")
@@ -63,11 +63,16 @@ st.sidebar.info("LLM : Google Gemini")
 # TITLE
 # =========================================================
 
-st.title("🐞 AI Smart Bug Analyzer & Fix Advisor")
+st.title(
+    "🐞 Creation of Intelligent Bug Diagnosis Platform "
+    "with Fix Recommendation Assistance"
+)
+
+st.subheader("Group 2")
 
 st.write(
-    "Submit a bug report to analyze severity, logs, "
-    "root cause, duplicate bugs and recommended fixes."
+    "An intelligent platform for automated bug diagnosis, "
+    "root cause analysis, duplicate detection and fix recommendation."
 )
 
 
@@ -102,7 +107,7 @@ uploaded_file = st.file_uploader(
 
 if st.button("🚀 Submit Bug"):
 
-    # Reset knowledge-base confirmation
+    # Reset previous knowledge-base confirmation
     st.session_state.knowledge_base_added = False
 
     # Save input values
@@ -150,7 +155,7 @@ if st.button("🚀 Submit Bug"):
             error_log
         )
 
-    # Store analysis
+    # Store analysis in session
     st.session_state.analysis = analysis
 
 
@@ -164,7 +169,6 @@ if st.button("🚀 Submit Bug"):
 
     bug_record = {
         "Title": bug_title,
-
         "Description": bug_description,
 
         "Severity":
@@ -216,7 +220,7 @@ if st.button("🚀 Submit Bug"):
 
 
 # =========================================================
-# SHOW ANALYSIS ONLY AFTER SUBMIT
+# SHOW ANALYSIS
 # =========================================================
 
 if st.session_state.analysis is not None:
@@ -515,7 +519,7 @@ if st.session_state.analysis is not None:
 
 
     # =====================================================
-    # STEP 2 - KNOWLEDGE BASE GROWTH
+    # KNOWLEDGE BASE GROWTH
     # =====================================================
 
     st.divider()
@@ -586,8 +590,7 @@ if st.session_state.analysis is not None:
         else:
 
             st.success(
-                "✅ This resolved bug is already added "
-                "to the knowledge base."
+                "✅ This resolved bug is already added to the knowledge base."
             )
 
 
@@ -673,7 +676,7 @@ if st.session_state.analysis is not None:
 
 
     # =====================================================
-    # STEP 1 - DEFECT PATTERN ANALYTICS
+    # DEFECT PATTERN ANALYTICS
     # =====================================================
 
     st.divider()
@@ -694,10 +697,6 @@ if st.session_state.analysis is not None:
 
     else:
 
-        # -------------------------------------------------
-        # TOTAL BUGS
-        # -------------------------------------------------
-
         st.metric(
             "🐞 Total Bugs Analyzed",
             patterns["total_bugs"]
@@ -705,7 +704,7 @@ if st.session_state.analysis is not None:
 
 
         # -------------------------------------------------
-        # SEVERITY
+        # SEVERITY PATTERNS
         # -------------------------------------------------
 
         st.subheader(
@@ -724,7 +723,7 @@ if st.session_state.analysis is not None:
 
 
         # -------------------------------------------------
-        # COMPONENT
+        # COMPONENT PATTERNS
         # -------------------------------------------------
 
         st.subheader(
@@ -743,7 +742,7 @@ if st.session_state.analysis is not None:
 
 
         # -------------------------------------------------
-        # EXCEPTION
+        # EXCEPTION PATTERNS
         # -------------------------------------------------
 
         st.subheader(
@@ -762,7 +761,7 @@ if st.session_state.analysis is not None:
 
 
         # -------------------------------------------------
-        # ROOT CAUSE
+        # ROOT CAUSE PATTERNS
         # -------------------------------------------------
 
         st.subheader(
@@ -863,7 +862,7 @@ if st.session_state.analysis is not None:
 
 
     # =====================================================
-    # STEP 3 - END-TO-END TESTING & VALIDATION
+    # END-TO-END TESTING & VALIDATION
     # =====================================================
 
     st.divider()
@@ -892,14 +891,13 @@ if st.session_state.analysis is not None:
 
 
     # -----------------------------------------------------
-    # MINIMUM FIVE BUGS
+    # MINIMUM FIVE BUGS CHECK
     # -----------------------------------------------------
 
     if validation["minimum_five_bugs"]:
 
         st.success(
-            "✅ Minimum 5 distinct bug submissions "
-            "requirement satisfied."
+            "✅ Minimum 5 distinct bug submissions requirement satisfied."
         )
 
     else:

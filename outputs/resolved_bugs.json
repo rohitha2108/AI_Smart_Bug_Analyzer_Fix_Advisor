@@ -70,5 +70,23 @@
         "Recommended Fix": "Verify the file path and ensure the file exists.",
         "Best Practice": "Validate file existence before reading.",
         "Confirmed": true
+    },
+    {
+        "Title": "Login Error",
+        "Description": "Unable to login after entering password.\n",
+        "Exception": "NullPointerException",
+        "Root Cause": "Possible application logic or configuration issue.",
+        "Recommended Fix": "Review the application logic and configuration.",
+        "Best Practice": "Perform detailed debugging and code review.",
+        "Confirmed": true
+    },
+    {
+        "Title": "Login Error",
+        "Description": "Unable to login after entering password.\n\n",
+        "Exception": "NullPointerException",
+        "Root Cause": "Possible application logic or configuration issue.",
+        "Recommended Fix": "Review the application logic and configuration.",
+        "Best Practice": "Perform detailed debugging and code review.",
+        "Confirmed": true
     }
 ]
