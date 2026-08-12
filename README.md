@@ -161,7 +161,7 @@ The complete pipeline was tested using five distinct bug categories:
 
 ## 📁 Project Structure
 
-
+```text
 AI_SMART_BUG_ANALYZER_FIX_ADVISOR/
 │
 ├── app.py
@@ -188,7 +188,7 @@ AI_SMART_BUG_ANALYZER_FIX_ADVISOR/
 ├── TECHNICAL_DOCUMENTATION.md
 └── README.md
 
-
+```
 ## 🔄 Complete Bug Analysis Workflow
 
 1. User submits a bug report through the Streamlit interface.
