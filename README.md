@@ -161,7 +161,7 @@ The complete pipeline was tested using five distinct bug categories:
 
 ## 📁 Project Structure
 
-```text
+
 AI_SMART_BUG_ANALYZER_FIX_ADVISOR/
 │
 ├── app.py
@@ -187,6 +187,7 @@ AI_SMART_BUG_ANALYZER_FIX_ADVISOR/
 ├── requirements.txt
 ├── TECHNICAL_DOCUMENTATION.md
 └── README.md
+
 
 ## 🔄 Complete Bug Analysis Workflow
 
