@@ -88,5 +88,32 @@
         "Recommended Fix": "Review the application logic and configuration.",
         "Best Practice": "Perform detailed debugging and code review.",
         "Confirmed": true
+    },
+    {
+        "Title": "Login Error",
+        "Description": "\nUnable to login after entering password.\n",
+        "Exception": "NullPointerException",
+        "Root Cause": "Possible application logic or configuration issue.",
+        "Recommended Fix": "Review the application logic and configuration.",
+        "Best Practice": "Perform detailed debugging and code review.",
+        "Confirmed": true
+    },
+    {
+        "Title": "UI Error",
+        "Description": "\nSubmit button is not visible on homepage.\n\n",
+        "Exception": "Unknown",
+        "Root Cause": "Possible application logic or configuration issue.",
+        "Recommended Fix": "Review the application logic and configuration.",
+        "Best Practice": "Perform detailed debugging and code review.",
+        "Confirmed": true
+    },
+    {
+        "Title": "UI Error",
+        "Description": "\nSubmit button is not visible on homepage.",
+        "Exception": "Unknown",
+        "Root Cause": "Possible application logic or configuration issue.",
+        "Recommended Fix": "Review the application logic and configuration.",
+        "Best Practice": "Perform detailed debugging and code review.",
+        "Confirmed": true
     }
 ]

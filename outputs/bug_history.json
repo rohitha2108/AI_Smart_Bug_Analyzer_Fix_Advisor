@@ -228,5 +228,65 @@
         "Exception": "NullPointerException",
         "Failure Point": "Login.java:45",
         "Root Cause": "Possible application logic or configuration issue."
+    },
+    {
+        "Title": "Login Error",
+        "Description": "\nUnable to login after entering password.\n",
+        "Severity": "High",
+        "Priority": "High",
+        "Component": "Authentication",
+        "Exception": "NullPointerException",
+        "Failure Point": "Login.java:45",
+        "Root Cause": "Possible application logic or configuration issue."
+    },
+    {
+        "Title": "UI Error",
+        "Description": "\nSubmit button is not visible on homepage.\n\n",
+        "Severity": "Low",
+        "Priority": "Low",
+        "Component": "Frontend",
+        "Exception": "Unknown",
+        "Failure Point": "Unknown",
+        "Root Cause": "Possible application logic or configuration issue."
+    },
+    {
+        "Title": "Payment Error",
+        "Description": "\nPayment fails when the user tries to complete the transaction.\n",
+        "Severity": "Low",
+        "Priority": "Low",
+        "Component": "General",
+        "Exception": "PaymentGatewayException",
+        "Failure Point": "Unknown",
+        "Root Cause": "Possible application logic or configuration issue."
+    },
+    {
+        "Title": "Database Error",
+        "Description": "Database connection failed while fetching user details.\n",
+        "Severity": "High",
+        "Priority": "Medium",
+        "Component": "Database",
+        "Exception": "SQLException",
+        "Failure Point": "Database.java:78",
+        "Root Cause": "Database connection or query execution failure."
+    },
+    {
+        "Title": "File Upload Error",
+        "Description": "\nFile upload fails when the user uploads a large document.\n",
+        "Severity": "Low",
+        "Priority": "Low",
+        "Component": "General",
+        "Exception": "FileSizeLimitExceededException",
+        "Failure Point": "Unknown",
+        "Root Cause": "File path missing or file not found."
+    },
+    {
+        "Title": "UI Error",
+        "Description": "\nSubmit button is not visible on homepage.",
+        "Severity": "Low",
+        "Priority": "Low",
+        "Component": "Frontend",
+        "Exception": "Unknown",
+        "Failure Point": "Unknown",
+        "Root Cause": "Possible application logic or configuration issue."
     }
 ]
