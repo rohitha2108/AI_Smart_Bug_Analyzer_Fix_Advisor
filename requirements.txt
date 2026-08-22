@@ -1,0 +1,8 @@
+streamlit
+pandas
+numpy
+sentence-transformers
+faiss-cpu
+langchain
+langchain-text-splitters
+google-generativeai
